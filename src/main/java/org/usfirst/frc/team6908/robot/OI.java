@@ -38,5 +38,5 @@ public class OI {
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
 	public Joystick TankDriveControl1 = new Joystick(0); //new joystick object connected to port 0
-	public Joystick TankDriveControl2 = new Joystick(1);
+	public Joystick TankDriveControl2 = new Joystick(1); 
 }

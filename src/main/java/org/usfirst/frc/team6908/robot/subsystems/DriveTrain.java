@@ -24,7 +24,7 @@ public class DriveTrain extends Subsystem {
 		RobotMap.frontRight.set(speedRight);
 		RobotMap.backRight.set(speedRight);
 		RobotMap.frontLeft.set(speedLeft);
-		RobotMap.backLeft.set(speedLeft);	
+		RobotMap.backLeft.set(speedLeft); 	
 	}
 
 }

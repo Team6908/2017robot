@@ -19,7 +19,7 @@ public class TankDrive extends Command  {
 		double leftSideSpeed = Robot.oi.TankDriveControl1.getY();
 		double rightSideSpeed = Robot.oi.TankDriveControl2.getY();
 		
-		Robot.drivetrain.Drive(leftSideSpeed, rightSideSpeed);
+		Robot.drivetrain.Drive(leftSideSpeed, rightSideSpeed); 
 		
 		
 	}
