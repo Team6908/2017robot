@@ -55,7 +55,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
-		drivetrain.Drive(800, 800);
+		
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class Robot extends IterativeRobot {
 
 		// schedule the autonomous command (example)
 		if (autonomousCommand != null)
-			autonomousCommand.start();
+			autonomousCommand.start();//starts the autonomous code period if not already initialized
 	}
 
 	/**
@@ -92,6 +92,10 @@ public class Robot extends IterativeRobot {
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		drivetrain.Drive(800,800);
+		/*
+		*setting drive train speeds to 800 for both left and right
+		*should drive forward at that motor speed at 20ms increments
+		*/
 	}
 
 	@Override
