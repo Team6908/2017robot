@@ -92,6 +92,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
+		drivetrain.Drive(800,800);
 	}
 
 	@Override
