@@ -2,7 +2,8 @@
 package org.usfirst.frc.team6908.robot;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
-
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
@@ -22,8 +23,17 @@ import org.usfirst.frc.team6908.robot.subsystems.ExampleSubsystem;
 
 // OLD PROJECT
 public class Robot extends IterativeRobot {
-
 	
+	public static Joystick joy; //Xbox controller
+	
+	//Variables for Xbox controller
+	
+	public static Talon talArmLeft;
+    public static Talon talArmRight;
+
+	public static double leftThumb, rightThumb;
+	public static double leftTrig, rightTrig;
+	public static double deadZ;	
 	
 	public static final DriveTrain drivetrain = new DriveTrain(); //create a drivetrain object 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
