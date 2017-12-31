@@ -40,7 +40,6 @@ public class OI {
 	// button.whenReleased(new ExampleCommand());
 	public Joystick TankDriveControl1 = new Joystick(0); //new joystick object connected to port 0
 	public Joystick TankDriveControl2 = new Joystick(1); //new joystick object connected to port 1
-	
 	//use TankDriveControl1 for leftHandSide
 	//use TankDriveControl2 for rightHandSide
 }
