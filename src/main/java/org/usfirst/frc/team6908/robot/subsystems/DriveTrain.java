@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team6908.robot.RobotMap;
 
 
-public class DriveTrain extends Subsystem {
+public class DriveTrain extends Subsystem { 
 	
 	public RobotDrive robotdrive = new RobotDrive(RobotMap.frontLeft, RobotMap.backLeft,RobotMap.frontRight, RobotMap.backRight ); // RobotDrive with 2 motors specified as SpeedController object
 
