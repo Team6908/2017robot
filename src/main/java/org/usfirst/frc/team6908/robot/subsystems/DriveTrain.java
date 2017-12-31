@@ -1,6 +1,7 @@
 package org.usfirst.frc.team6908.robot.subsystems;
 
 import edu.wpi.first.wpilibj.RobotDrive;
+
 import edu.wpi.first.wpilibj.command.Subsystem; //import to extend the subsystem class
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
@@ -9,7 +10,7 @@ import org.usfirst.frc.team6908.robot.RobotMap;
 
 public class DriveTrain extends Subsystem {
 	
-	public RobotDrive robotdrive = new RobotDrive(RobotMap.frontLeft, RobotMap.frontRight); // RobotDrive with 2 motors specified as SpeedController object
+	public RobotDrive robotdrive = new RobotDrive(RobotMap.frontLeft, RobotMap.backLeft,RobotMap.frontRight, RobotMap.backRight ); // RobotDrive with 2 motors specified as SpeedController object
 
 	
 	protected void initDefaultCommand() { // Every subsystem has a initDefaultCommand 
@@ -20,7 +21,7 @@ public class DriveTrain extends Subsystem {
 		LiveWindow.addActuator("Drive Motors", "backLeft", RobotMap.backLeft);
 		
 	}
-	public void Drive(double speedLeft, double speedRight) {
+	public void Drive (double speedLeft, double speedRight) {
 		RobotMap.frontRight.set(speedRight);
 		RobotMap.backRight.set(speedRight);
 		RobotMap.frontLeft.set(speedLeft);

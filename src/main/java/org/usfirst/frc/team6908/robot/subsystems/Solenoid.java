@@ -1,8 +1,9 @@
 package org.usfirst.frc.team6908.robot.subsystems;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class Solenoid
+public class Solenoid extends Subsystem
 {
 	public static void toggle(DoubleSolenoid piston)
 	{
@@ -14,6 +15,12 @@ public class Solenoid
 		{
 			piston.set(DoubleSolenoid.Value.kForward);
 		}
+	}
+
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }	
