@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Subsystem; //import to extend the subsystem
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team6908.robot.RobotMap;
+import org.usfirst.frc.team6908.robot.commands.TankDrive;
 
 
 public class DriveTrain extends Subsystem { 
@@ -13,7 +14,8 @@ public class DriveTrain extends Subsystem {
 	public RobotDrive robotdrive = new RobotDrive(RobotMap.frontLeft, RobotMap.backLeft,RobotMap.frontRight, RobotMap.backRight ); // RobotDrive with 2 motors specified as SpeedController object
 
 	
-	protected void initDefaultCommand() { // Every subsystem has a initDefaultCommand 
+	protected void initDefaultCommand() { // Every subsystem has a initDefaultCommand
+		setDefaultCommand(new TankDrive());
 		// TODO Auto-generated method stub
 		LiveWindow.addActuator("Drive Motors", "frontRight", RobotMap.frontRight);//adds the actuator to the LiveWindow display
 		LiveWindow.addActuator("Drive Motors", "frontLeft", RobotMap.frontLeft);
