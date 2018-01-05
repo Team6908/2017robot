@@ -3,6 +3,7 @@ package org.usfirst.frc.team6908.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 
 import org.usfirst.frc.team6908.robot.commands.*;
@@ -41,13 +42,16 @@ public class OI {
 	// button.whenReleased(new ExampleCommand());
 	public Joystick TankDriveControl1; //new joystick object
 	public Joystick TankDriveControl2; //new joystick object
+	public XboxController  xbox;
 	
 	public Button moveArm; //New button object
 	
 	public OI(){
+		xbox = new XboxController(0);
 		TankDriveControl1 = new Joystick(0); //Connects joystick object to port 1
 		TankDriveControl2 = new Joystick(1); //Connects joystick object to port 2
 		
+		moveArm = new JoystickButton(xbox, 0);
 		moveArm = new JoystickButton(TankDriveControl1, 0); //binds button object to port 0 on tankdrive1
 		//The port # should be changed based on the layout of the joystick once we have that info
 		
