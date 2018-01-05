@@ -2,8 +2,10 @@ package org.usfirst.frc.team6908.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.XboxController;
 
-import org.usfirst.frc.team6908.robot.commands.ExampleCommand;
+import org.usfirst.frc.team6908.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -37,9 +39,20 @@ public class OI {
 	// Start the command when the button is released and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
-	public Joystick TankDriveControl1 = new Joystick(0); //new joystick object connected to port 0
-	public Joystick TankDriveControl2 = new Joystick(1); //new joystick object connected to port 1
+	public Joystick TankDriveControl1; //new joystick object
+	public Joystick TankDriveControl2; //new joystick object
 	
+	public Button moveArm; //New button object
+	
+	public OI(){
+		TankDriveControl1 = new Joystick(0); //Connects joystick object to port 1
+		TankDriveControl2 = new Joystick(1); //Connects joystick object to port 2
+		
+		moveArm = new JoystickButton(TankDriveControl1, 0); //binds button object to port 0 on tankdrive1
+		//The port # should be changed based on the layout of the joystick once we have that info
+		
+		moveArm.whenPressed(new MoveArm()); //binds button to run MoveArm when pressed
+	}
 	//use TankDriveControl1 for leftHandSide
 	//use TankDriveControl2 for rightHandSide
 }
